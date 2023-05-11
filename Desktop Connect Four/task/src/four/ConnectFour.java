@@ -20,7 +20,7 @@ Organize rows and columns as shown in the example below.
 
 public class ConnectFour extends JFrame {
     boolean xMove = true;
-    ArrayList<JButton> buttons = new ArrayList<>();
+    List<JButton> buttons = new ArrayList<>();
     String[] pieces = {
             "A6","B6","C6","D6","E6","F6","G6",
             "A5","B5","C5","D5","E5","F5","G5",
@@ -36,26 +36,31 @@ public class ConnectFour extends JFrame {
         setLocationRelativeTo(null);
         setLayout(new GridLayout(6,7,5,5));
 
+        // For Every array element in pieces array, do the following:
         for (String piece : pieces) {
+            //Create new JButton b and set its text equal to " "
             JButton b = new JButton(" ");
+            //Set the name to ButtonA6 ......... ButtonG1
             b.setName("Button" + piece);
             b.setFocusPainted(false);
-
-            b.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    if(b.getText().equals(" ")) {
-                        if(xMove) {
-                            b.setText("X");
-                            xMove = false;
-                        }
-                        else {
-                            b.setText("O");
-                            xMove = true;
-                        }
+            // Register instance of event handler class as a listener
+            // on all JButtons components
+/*
+            b.addActionListener(e -> {
+                // Code that implements the methods in listener interface
+                if(b.getText().equals(" ")) {
+                    if(xMove) {
+                        b.setText("X");
+                        xMove = false;
+                    }
+                    else {
+                        b.setText("O");
+                        xMove = true;
                     }
                 }
             });
+ */
+
             buttons.add(b);
             add(b);
         }
@@ -63,16 +68,12 @@ public class ConnectFour extends JFrame {
 
         List<List<JButton>> gameBoard = new ArrayList<>();
 
-
-
-
-
         List<JButton> sortedButtons = new ArrayList<>(buttons);
         sortedButtons.sort(Comparator.comparing(JButton::getName));
         //ButtonA1 ButtonA2 ButtonA3 ButtonA4 ButtonA5 ButtonA6 ButtonB1 ButtonB2...
 
-        List<JButton> aColumn = new ArrayList<>(sortedButtons.subList(0,6)); // A
-        List<JButton> bColumn = new ArrayList<>(sortedButtons.subList(6,12)); // B
+        List<JButton> aColumn = new ArrayList<>(sortedButtons.subList(0,6));   // A
+        List<JButton> bColumn = new ArrayList<>(sortedButtons.subList(6,12));  // B
         List<JButton> cColumn = new ArrayList<>(sortedButtons.subList(12,18)); // C
         List<JButton> dColumn = new ArrayList<>(sortedButtons.subList(18,24)); // D
         List<JButton> eColumn = new ArrayList<>(sortedButtons.subList(24,30)); // E
@@ -87,31 +88,50 @@ public class ConnectFour extends JFrame {
         gameBoard.add(fColumn);
         gameBoard.add(gColumn);
 
-        gameBoard.add(sortedButtons.subList(0,6));    // A
-        gameBoard.add(sortedButtons.subList(6,12));   // B
-        gameBoard.add(sortedButtons.subList(12,18));  // C
-        gameBoard.add(sortedButtons.subList(18,24));  // D
-        gameBoard.add(sortedButtons.subList(24,30));  // E
-        gameBoard.add(sortedButtons.subList(30,36));  // F
-        gameBoard.add(sortedButtons.subList(36,42));  // G
 
-        for (List<JButton> jButton : gameBoard) {
-            for (int j = 0; j < gameBoard.get(0).size(); j++) {
-                System.out.println(jButton.get(j).getName());
-            }
-            System.out.println("---------------------------------------------");
+
+        ButtonListener buttonListener = new ButtonListener(gameBoard, buttons, sortedButtons);
+
+        /*
+        for(int i=0; i< buttons.size(); i++) {
+            buttons.get(i).putClientProperty("Column", "A");
+
+        }
+        
+         */
+
+
+
+
+        for(JButton b : buttons) {
+            b.addActionListener(buttonListener);
         }
 
+
+/*
         //Iterates and Prints out contents of both JButton ArrayLists
         for (JButton button : buttons) {
             System.out.println("buttons: " + button.getName());
         }
-        for (JButton sortedButton : sortedButtons) {
-            System.out.println("sortedButtons: " + sortedButton.getName());
+
+
+ */
+
+
+        for (List<JButton> jButton : gameBoard) {
+            for (int j = 0; j < gameBoard.get(0).size(); j++) {
+                System.out.println(jButton.get(j).getName());
+                System.out.println("Column: " + "A B C D E F G");
+            }
+            System.out.println("---------------------------------------------");
         }
 
 
-
+        /*
+        for (JButton sortedButton : sortedButtons) {
+            System.out.println("sortedButtons: " + sortedButton.getName());
+        }
+         */
 
 
         /*
