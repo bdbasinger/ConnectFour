@@ -20,6 +20,8 @@ Organize rows and columns as shown in the example below.
 
 public class ConnectFour extends JFrame {
     boolean xMove = true;
+    int rows = 6;
+    int cols = 7;
     List<JButton> buttons = new ArrayList<>();
     String[] pieces = {
             "A6","B6","C6","D6","E6","F6","G6",
@@ -28,6 +30,14 @@ public class ConnectFour extends JFrame {
             "A3","B3","C3","D3","E3","F3","G3",
             "A2","B2","C2","D2","E2","F2","G2",
             "A1","B1","C1","D1","E1","F1","G1"};
+
+    String[] letters = {
+            "A","B","C","D","E","F","G",
+            "A","B","C","D","E","F","G",
+            "A","B","C","D","E","F","G",
+            "A","B","C","D","E","F","G",
+            "A","B","C","D","E","F","G",
+            "A","B","C","D","E","F","G"};
 
     public ConnectFour() {
         setTitle("Connect Four");
@@ -61,24 +71,43 @@ public class ConnectFour extends JFrame {
             });
  */
 
+
             buttons.add(b);
             add(b);
         }
+
+        System.out.println();
+
         setVisible(true);
 
         List<List<JButton>> gameBoard = new ArrayList<>();
 
-        List<JButton> sortedButtons = new ArrayList<>(buttons);
-        sortedButtons.sort(Comparator.comparing(JButton::getName));
+
+
+        for(int i = 0; i < buttons.size(); i++) {
+            buttons.get(i).putClientProperty("Column",letters[i]);
+        }
+
+        /*
+        for(int i=rows; i>0; i--) {
+            for(char j ='A'; j < cols + 'A'; j++) {
+            }
+        }
+
+
+         */
+
+        //List<JButton> sortedButtons = new ArrayList<>(buttons);
+        buttons.sort(Comparator.comparing(JButton::getName));
         //ButtonA1 ButtonA2 ButtonA3 ButtonA4 ButtonA5 ButtonA6 ButtonB1 ButtonB2...
 
-        List<JButton> aColumn = new ArrayList<>(sortedButtons.subList(0,6));   // A
-        List<JButton> bColumn = new ArrayList<>(sortedButtons.subList(6,12));  // B
-        List<JButton> cColumn = new ArrayList<>(sortedButtons.subList(12,18)); // C
-        List<JButton> dColumn = new ArrayList<>(sortedButtons.subList(18,24)); // D
-        List<JButton> eColumn = new ArrayList<>(sortedButtons.subList(24,30)); // E
-        List<JButton> fColumn = new ArrayList<>(sortedButtons.subList(30,36)); // F
-        List<JButton> gColumn = new ArrayList<>(sortedButtons.subList(36,42)); // G
+        List<JButton> aColumn = new ArrayList<>(buttons.subList(0,6));   // A
+        List<JButton> bColumn = new ArrayList<>(buttons.subList(6,12));  // B
+        List<JButton> cColumn = new ArrayList<>(buttons.subList(12,18)); // C
+        List<JButton> dColumn = new ArrayList<>(buttons.subList(18,24)); // D
+        List<JButton> eColumn = new ArrayList<>(buttons.subList(24,30)); // E
+        List<JButton> fColumn = new ArrayList<>(buttons.subList(30,36)); // F
+        List<JButton> gColumn = new ArrayList<>(buttons.subList(36,42)); // G
 
         gameBoard.add(aColumn);
         gameBoard.add(bColumn);
@@ -90,15 +119,28 @@ public class ConnectFour extends JFrame {
 
 
 
-        ButtonListener buttonListener = new ButtonListener(gameBoard, buttons, sortedButtons);
+        ButtonListener buttonListener = new ButtonListener(gameBoard, buttons);
 
         /*
         for(int i=0; i< buttons.size(); i++) {
             buttons.get(i).putClientProperty("Column", "A");
 
         }
-        
+
          */
+
+
+        /*
+        for(char letter = 'A'; letter <= 'G'; letter++) {
+            //b.putClientProperty();
+            //buttons.get(i).putClientProperty("Column", "A");
+        }
+         */
+
+
+
+
+
 
 
 
