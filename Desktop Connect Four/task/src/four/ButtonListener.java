@@ -46,15 +46,19 @@ public class ButtonListener implements ActionListener {
 
         int indexOfRow = checkButton(indexOfColumn);
 
-        gameBoard.get(indexOfColumn).get(indexOfRow).setText("X");
+        if(xMove) {
+            gameBoard.get(indexOfColumn).get(indexOfRow).setText("X");
+            xMove = false;
+        } else {
+            gameBoard.get(indexOfColumn).get(indexOfRow).setText("O");
+            xMove = true;
+        }
 
 
 
 
-        //switch (columnLetter)
-        //{
 
-        //}
+
 
         /*
         b.addActionListener(new ActionListener() {

@@ -1,8 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Connect4Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-08T22:13:18" hostname="VizioB" time="11.848">
+<testsuite name="Connect4Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-12T20:39:05" hostname="VizioB" time="11.996">
   <properties/>
-  <testcase name="start" classname="Connect4Test" time="11.848"/>
-  <system-out><![CDATA[?[1;31m
+  <testcase name="start" classname="Connect4Test" time="11.996"/>
+  <system-out><![CDATA[ButtonA1
+Column: A B C D E F G
+ButtonA2
+Column: A B C D E F G
+ButtonA3
+Column: A B C D E F G
+ButtonA4
+Column: A B C D E F G
+ButtonA5
+Column: A B C D E F G
+ButtonA6
+Column: A B C D E F G
+---------------------------------------------
+ButtonB1
+Column: A B C D E F G
+ButtonB2
+Column: A B C D E F G
+ButtonB3
+Column: A B C D E F G
+ButtonB4
+Column: A B C D E F G
+ButtonB5
+Column: A B C D E F G
+ButtonB6
+Column: A B C D E F G
+---------------------------------------------
+ButtonC1
+Column: A B C D E F G
+ButtonC2
+Column: A B C D E F G
+ButtonC3
+Column: A B C D E F G
+ButtonC4
+Column: A B C D E F G
+ButtonC5
+Column: A B C D E F G
+ButtonC6
+Column: A B C D E F G
+---------------------------------------------
+ButtonD1
+Column: A B C D E F G
+ButtonD2
+Column: A B C D E F G
+ButtonD3
+Column: A B C D E F G
+ButtonD4
+Column: A B C D E F G
+ButtonD5
+Column: A B C D E F G
+ButtonD6
+Column: A B C D E F G
+---------------------------------------------
+ButtonE1
+Column: A B C D E F G
+ButtonE2
+Column: A B C D E F G
+ButtonE3
+Column: A B C D E F G
+ButtonE4
+Column: A B C D E F G
+ButtonE5
+Column: A B C D E F G
+ButtonE6
+Column: A B C D E F G
+---------------------------------------------
+ButtonF1
+Column: A B C D E F G
+ButtonF2
+Column: A B C D E F G
+ButtonF3
+Column: A B C D E F G
+ButtonF4
+Column: A B C D E F G
+ButtonF5
+Column: A B C D E F G
+ButtonF6
+Column: A B C D E F G
+---------------------------------------------
+ButtonG1
+Column: A B C D E F G
+ButtonG2
+Column: A B C D E F G
+ButtonG3
+Column: A B C D E F G
+ButtonG4
+Column: A B C D E F G
+ButtonG5
+Column: A B C D E F G
+ButtonG6
+Column: A B C D E F G
+---------------------------------------------
+?[1;31m
 Start test 1?[0m
 ?[1;31m
 Start test 2?[0m
@@ -14,6 +105,132 @@ Start test 4?[0m
 Start test 5?[0m
 ?[1;31m
 Start test 6?[0m
+?[0;34mA
+?[0m?[0;34mbutton.getName() == ButtonA6
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mB
+?[0m?[0;34mbutton.getName() == ButtonB6
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mC
+?[0m?[0;34mbutton.getName() == ButtonC6
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mD
+?[0m?[0;34mbutton.getName() == ButtonD6
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mE
+?[0m?[0;34mbutton.getName() == ButtonE6
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mF
+?[0m?[0;34mbutton.getName() == ButtonF6
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mG
+?[0m?[0;34mbutton.getName() == ButtonG6
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mA
+?[0m?[0;34mbutton.getName() == ButtonA5
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mB
+?[0m?[0;34mbutton.getName() == ButtonB5
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mC
+?[0m?[0;34mbutton.getName() == ButtonC5
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mD
+?[0m?[0;34mbutton.getName() == ButtonD5
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mE
+?[0m?[0;34mbutton.getName() == ButtonE5
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mF
+?[0m?[0;34mbutton.getName() == ButtonF5
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mG
+?[0m?[0;34mbutton.getName() == ButtonG5
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mA
+?[0m?[0;34mbutton.getName() == ButtonA4
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mB
+?[0m?[0;34mbutton.getName() == ButtonB4
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mC
+?[0m?[0;34mbutton.getName() == ButtonC4
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mD
+?[0m?[0;34mbutton.getName() == ButtonD4
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mE
+?[0m?[0;34mbutton.getName() == ButtonE4
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mF
+?[0m?[0;34mbutton.getName() == ButtonF4
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mG
+?[0m?[0;34mbutton.getName() == ButtonG4
+?[0m?[0;34mbutton.getText() ==  
+?[0m?[0;34mA
+?[0m?[0;34mbutton.getName() == ButtonA3
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mB
+?[0m?[0;34mbutton.getName() == ButtonB3
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mC
+?[0m?[0;34mbutton.getName() == ButtonC3
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mD
+?[0m?[0;34mbutton.getName() == ButtonD3
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mE
+?[0m?[0;34mbutton.getName() == ButtonE3
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mF
+?[0m?[0;34mbutton.getName() == ButtonF3
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mG
+?[0m?[0;34mbutton.getName() == ButtonG3
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mA
+?[0m?[0;34mbutton.getName() == ButtonA2
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mB
+?[0m?[0;34mbutton.getName() == ButtonB2
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mC
+?[0m?[0;34mbutton.getName() == ButtonC2
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mD
+?[0m?[0;34mbutton.getName() == ButtonD2
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mE
+?[0m?[0;34mbutton.getName() == ButtonE2
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mF
+?[0m?[0;34mbutton.getName() == ButtonF2
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mG
+?[0m?[0;34mbutton.getName() == ButtonG2
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mA
+?[0m?[0;34mbutton.getName() == ButtonA1
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mB
+?[0m?[0;34mbutton.getName() == ButtonB1
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mC
+?[0m?[0;34mbutton.getName() == ButtonC1
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mD
+?[0m?[0;34mbutton.getName() == ButtonD1
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mE
+?[0m?[0;34mbutton.getName() == ButtonE1
+?[0m?[0;34mbutton.getText() == X
+?[0m?[0;34mF
+?[0m?[0;34mbutton.getName() == ButtonF1
+?[0m?[0;34mbutton.getText() == O
+?[0m?[0;34mG
+?[0m?[0;34mbutton.getName() == ButtonG1
+?[0m?[0;34mbutton.getText() == X
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

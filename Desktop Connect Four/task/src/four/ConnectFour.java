@@ -19,10 +19,8 @@ Organize rows and columns as shown in the example below.
  */
 
 public class ConnectFour extends JFrame {
-    boolean xMove = true;
-    int rows = 6;
-    int cols = 7;
     List<JButton> buttons = new ArrayList<>();
+
     String[] pieces = {
             "A6","B6","C6","D6","E6","F6","G6",
             "A5","B5","C5","D5","E5","F5","G5",
@@ -53,53 +51,25 @@ public class ConnectFour extends JFrame {
             //Set the name to ButtonA6 ......... ButtonG1
             b.setName("Button" + piece);
             b.setFocusPainted(false);
-            // Register instance of event handler class as a listener
-            // on all JButtons components
-/*
-            b.addActionListener(e -> {
-                // Code that implements the methods in listener interface
-                if(b.getText().equals(" ")) {
-                    if(xMove) {
-                        b.setText("X");
-                        xMove = false;
-                    }
-                    else {
-                        b.setText("O");
-                        xMove = true;
-                    }
-                }
-            });
- */
-
-
+            //Add the JButton I'm working with to the buttons ArrayList
             buttons.add(b);
+            //Add the JButton to the layout
             add(b);
         }
-
-        System.out.println();
-
         setVisible(true);
 
         List<List<JButton>> gameBoard = new ArrayList<>();
-
-
 
         for(int i = 0; i < buttons.size(); i++) {
             buttons.get(i).putClientProperty("Column",letters[i]);
         }
 
-        /*
-        for(int i=rows; i>0; i--) {
-            for(char j ='A'; j < cols + 'A'; j++) {
-            }
-        }
 
-
-         */
-
-        //List<JButton> sortedButtons = new ArrayList<>(buttons);
+        //Sort the buttons
         buttons.sort(Comparator.comparing(JButton::getName));
         //ButtonA1 ButtonA2 ButtonA3 ButtonA4 ButtonA5 ButtonA6 ButtonB1 ButtonB2...
+
+
 
         List<JButton> aColumn = new ArrayList<>(buttons.subList(0,6));   // A
         List<JButton> bColumn = new ArrayList<>(buttons.subList(6,12));  // B
@@ -108,6 +78,11 @@ public class ConnectFour extends JFrame {
         List<JButton> eColumn = new ArrayList<>(buttons.subList(24,30)); // E
         List<JButton> fColumn = new ArrayList<>(buttons.subList(30,36)); // F
         List<JButton> gColumn = new ArrayList<>(buttons.subList(36,42)); // G
+
+        int indexOne = 0;
+        int indexTwo = 6;
+
+
 
         gameBoard.add(aColumn);
         gameBoard.add(bColumn);
