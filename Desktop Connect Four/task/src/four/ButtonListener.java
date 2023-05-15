@@ -1,9 +1,11 @@
 package four;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.*;
+import java.util.List;
 
 public class ButtonListener implements ActionListener {
     List<List<JButton>> horizontals;
@@ -12,6 +14,14 @@ public class ButtonListener implements ActionListener {
     List<List<JButton>> gameBoard;
     List<JButton> buttons;
     boolean xMove = true;
+
+    JButton[] winningButtons = new JButton[4];
+
+    boolean gameIsOver = false;
+
+
+
+
 
 
     int xInARow = 0;
@@ -39,23 +49,30 @@ public class ButtonListener implements ActionListener {
     // Define what happens when clicking a button on the board
     @Override
     public void actionPerformed(ActionEvent e) {
-        JButton button = (JButton) e.getSource();
-        String buttonName = button.getName();
-        System.out.println(buttonName + " has an index of " + buttons.indexOf(button));
-        String columnLetter = (String) button.getClientProperty("Column");
-        Integer indexOfColumn = columnToIndexMap.get(columnLetter);
-        int indexOfRow = checkButton(indexOfColumn);
-        if(xMove) {
-            gameBoard.get(indexOfColumn).get(indexOfRow).setText("X");
-            xMove = false;
-        } else {
-            gameBoard.get(indexOfColumn).get(indexOfRow).setText("O");
-            xMove = true;
-        }
-        if((checkWin(verticals) || checkWin(horizontals) || checkWin(diagonals) )) {
-            System.out.println("USER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!");
-        }
+        if(!gameIsOver) {
+            JButton button = (JButton) e.getSource();
+            String buttonName = button.getName();
+            System.out.println(buttonName + " has an index of " + buttons.indexOf(button));
+            String columnLetter = (String) button.getClientProperty("Column");
+            Integer indexOfColumn = columnToIndexMap.get(columnLetter);
+            int indexOfRow = checkButton(indexOfColumn);
+            if(xMove) {
+                gameBoard.get(indexOfColumn).get(indexOfRow).setText("X");
+                xMove = false;
+            } else {
+                gameBoard.get(indexOfColumn).get(indexOfRow).setText("O");
+                xMove = true;
+            }
+            if((checkWin(verticals) || checkWin(horizontals) || checkWin(diagonals) )) {
 
+                System.out.println("USER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!");
+                for(JButton b : winningButtons) {
+                    System.out.println("Winning Buttons: " + b.getName());
+                    b.setBackground(Color.CYAN);
+                    gameIsOver = true;
+                }
+            }
+        }
     }
 
 
@@ -82,18 +99,26 @@ public class ButtonListener implements ActionListener {
     private boolean checkWin(List<List<JButton>> list) {
         int countXsInARow = 0;
         int countOsInARow = 0;
+
         for(int i = 0; i < list.size(); i++) {
             for(int j = 0; j < list.get(i).size(); j++) {
                 if(buttonEqualsX(list.get(i).get(j))) {
                     countOsInARow = 0;
+                    winningButtons[countXsInARow] = list.get(i).get(j);
                     countXsInARow++;
+
                 }
                 if(buttonEqualsY(list.get(i).get(j))) {
                     countXsInARow = 0;
+                    winningButtons[countOsInARow] = list.get(i).get(j);
                     countOsInARow++;
+
                 }
-                if(countXsInARow == 4 || countOsInARow == 4)
+                if(countXsInARow == 4 || countOsInARow == 4) {
+
                     return true;
+                }
+
             }
         }
         return false;

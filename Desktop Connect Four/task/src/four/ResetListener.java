@@ -30,7 +30,5 @@ public class ResetListener extends JFrame implements ActionListener {
         game = null;
         game = new ConnectFour();
     }
-
-
 }
 

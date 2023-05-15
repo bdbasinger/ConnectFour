@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Connect4Test" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-12T20:39:05" hostname="VizioB" time="11.996">
+<testsuite name="Connect4Test" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-05-15T22:15:57" hostname="VizioB" time="1.222">
   <properties/>
-  <testcase name="start" classname="Connect4Test" time="11.996"/>
+  <testcase name="start" classname="Connect4Test" time="1.222">
+    <failure message="java.lang.AssertionError: Error in test #1&#10;&#10;Cannot find a component of class JButton with name ButtonReset" type="java.lang.AssertionError">java.lang.AssertionError: Error in test #1
+
+Cannot find a component of class JButton with name ButtonReset
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:203)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at jdk.proxy1/jdk.proxy1.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
   <system-out><![CDATA[ButtonA1
 Column: A B C D E F G
 ButtonA2
@@ -95,142 +145,6 @@ Column: A B C D E F G
 ---------------------------------------------
 ?[1;31m
 Start test 1?[0m
-?[1;31m
-Start test 2?[0m
-?[1;31m
-Start test 3?[0m
-?[1;31m
-Start test 4?[0m
-?[1;31m
-Start test 5?[0m
-?[1;31m
-Start test 6?[0m
-?[0;34mA
-?[0m?[0;34mbutton.getName() == ButtonA6
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mB
-?[0m?[0;34mbutton.getName() == ButtonB6
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mC
-?[0m?[0;34mbutton.getName() == ButtonC6
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mD
-?[0m?[0;34mbutton.getName() == ButtonD6
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mE
-?[0m?[0;34mbutton.getName() == ButtonE6
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mF
-?[0m?[0;34mbutton.getName() == ButtonF6
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mG
-?[0m?[0;34mbutton.getName() == ButtonG6
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mA
-?[0m?[0;34mbutton.getName() == ButtonA5
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mB
-?[0m?[0;34mbutton.getName() == ButtonB5
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mC
-?[0m?[0;34mbutton.getName() == ButtonC5
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mD
-?[0m?[0;34mbutton.getName() == ButtonD5
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mE
-?[0m?[0;34mbutton.getName() == ButtonE5
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mF
-?[0m?[0;34mbutton.getName() == ButtonF5
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mG
-?[0m?[0;34mbutton.getName() == ButtonG5
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mA
-?[0m?[0;34mbutton.getName() == ButtonA4
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mB
-?[0m?[0;34mbutton.getName() == ButtonB4
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mC
-?[0m?[0;34mbutton.getName() == ButtonC4
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mD
-?[0m?[0;34mbutton.getName() == ButtonD4
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mE
-?[0m?[0;34mbutton.getName() == ButtonE4
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mF
-?[0m?[0;34mbutton.getName() == ButtonF4
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mG
-?[0m?[0;34mbutton.getName() == ButtonG4
-?[0m?[0;34mbutton.getText() ==  
-?[0m?[0;34mA
-?[0m?[0;34mbutton.getName() == ButtonA3
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mB
-?[0m?[0;34mbutton.getName() == ButtonB3
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mC
-?[0m?[0;34mbutton.getName() == ButtonC3
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mD
-?[0m?[0;34mbutton.getName() == ButtonD3
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mE
-?[0m?[0;34mbutton.getName() == ButtonE3
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mF
-?[0m?[0;34mbutton.getName() == ButtonF3
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mG
-?[0m?[0;34mbutton.getName() == ButtonG3
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mA
-?[0m?[0;34mbutton.getName() == ButtonA2
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mB
-?[0m?[0;34mbutton.getName() == ButtonB2
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mC
-?[0m?[0;34mbutton.getName() == ButtonC2
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mD
-?[0m?[0;34mbutton.getName() == ButtonD2
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mE
-?[0m?[0;34mbutton.getName() == ButtonE2
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mF
-?[0m?[0;34mbutton.getName() == ButtonF2
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mG
-?[0m?[0;34mbutton.getName() == ButtonG2
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mA
-?[0m?[0;34mbutton.getName() == ButtonA1
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mB
-?[0m?[0;34mbutton.getName() == ButtonB1
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mC
-?[0m?[0;34mbutton.getName() == ButtonC1
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mD
-?[0m?[0;34mbutton.getName() == ButtonD1
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mE
-?[0m?[0;34mbutton.getName() == ButtonE1
-?[0m?[0;34mbutton.getText() == X
-?[0m?[0;34mF
-?[0m?[0;34mbutton.getName() == ButtonF1
-?[0m?[0;34mbutton.getText() == O
-?[0m?[0;34mG
-?[0m?[0;34mbutton.getName() == ButtonG1
-?[0m?[0;34mbutton.getText() == X
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

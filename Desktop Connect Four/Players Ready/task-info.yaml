@@ -636,5 +636,11 @@ files:
   visible: true
   learner_created: true
 feedback_link: https://hyperskill.org/learn/step/17270#comment
-status: Unchecked
+status: Failed
+feedback:
+  message: |-
+    Error in test #1
+
+    Cannot find a component of class JButton with name ButtonReset
+  time: "Mon, 15 May 2023 22:15:59 UTC"
 record: -1
