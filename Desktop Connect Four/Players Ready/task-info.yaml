@@ -533,6 +533,108 @@ files:
         }
     }
   learner_created: false
+- name: src/four/ButtonListener.java
+  visible: true
+  text: |
+    package four;
+
+    import javax.swing.*;
+    import java.awt.event.ActionEvent;
+    import java.awt.event.ActionListener;
+    import java.util.*;
+
+    public class ButtonListener implements ActionListener {
+        boolean xMove = true;
+        List<List<JButton>> gameBoard;
+        List<JButton> buttons;
+
+        int xInARow = 0;
+        int yInARow = 0;
+
+        Map<String, Integer> columnToIndexMap = Map.of(
+                "A",0,
+                "B",1,
+                "C",2,
+                "D",3,
+                "E",4,
+                "F",5,
+                "G",6
+        );
+
+        // Constructor
+        public ButtonListener(List<List<JButton>> gameBoard, List<JButton> buttons) {
+            this.gameBoard = gameBoard;
+            this.buttons = buttons;
+        }
+
+        // Define what happens when clicking a button on the board
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            JButton button = (JButton) e.getSource();
+
+
+            //buttons.indexOf(button);
+
+            System.out.println(buttons.indexOf(button));
+
+            String buttonName = button.getName();
+            String buttonText = button.getText();
+
+            System.out.println("button.getName() == " + buttonName);
+            System.out.println("button.getText() == " + buttonText);
+
+            String columnLetter = (String) button.getClientProperty("Column");
+            Integer indexOfColumn = columnToIndexMap.get(columnLetter);
+            int indexOfRow = checkButton(indexOfColumn);
+
+
+
+
+
+            if(xMove) {
+                gameBoard.get(indexOfColumn).get(indexOfRow).setText("X");
+                xMove = false;
+            } else {
+                gameBoard.get(indexOfColumn).get(indexOfRow).setText("O");
+                xMove = true;
+            }
+
+            boolean win = checkForAWin();
+            if(win) System.out.println("A User Won!");
+        }
+
+
+        //Find the index of where the player's X or O should be placed
+        public int checkButton(int index) {
+            List<JButton> list = gameBoard.get(index);
+            for(int i = 0; i < list.size(); i++) {
+                if(Objects.equals(list.get(i).getText(), " ")) {
+                    return i;
+                }
+            }
+            return 0;
+        }
+
+
+        /*
+        After each click by the user, use the checkForAWin method
+         */
+
+        public boolean checkForAWin() {
+
+
+
+            return false;
+        }
+
+
+
+
+    }
+  learner_created: true
+- name: src/four/ResetListener.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/17270#comment
 status: Unchecked
 record: -1
