@@ -52,8 +52,6 @@ public class ConnectFour extends JFrame {
         setSize(800, 800);
         setLocationRelativeTo(null);
         setLayout(new GridLayout(6,7,5,5));
-
-
         // For Every array element in pieces array, do the following:
         for (String piece : pieces) {
             //Create new JButton b and set its text equal to " "

@@ -36,6 +36,7 @@ public class ButtonListener implements ActionListener {
         this.horizontals = horizontals;
         this.verticals = verticals;
         this.diagonals = diagonals;
+
     }
 
     // Define what happens when clicking a button on the board
@@ -78,6 +79,10 @@ public class ButtonListener implements ActionListener {
             }
         }
         return 0;
+    }
+
+    public void returnFalse() {
+        gameIsOver = false;
     }
 
 
