@@ -46,6 +46,7 @@ public class ButtonListener implements ActionListener {
     // Define what happens when clicking a button on the board
     @Override
     public void actionPerformed(ActionEvent e) {
+
         if(!gameIsOver) {
             JButton button = (JButton) e.getSource();
             String buttonName = button.getName();
@@ -53,13 +54,17 @@ public class ButtonListener implements ActionListener {
             String columnLetter = (String) button.getClientProperty("Column");
             Integer indexOfColumn = columnToIndexMap.get(columnLetter);
             int indexOfRow = checkButton(indexOfColumn);
-            if(xMove) {
-                gameBoard.get(indexOfColumn).get(indexOfRow).setText("X");
-                xMove = false;
-            } else {
-                gameBoard.get(indexOfColumn).get(indexOfRow).setText("O");
-                xMove = true;
+
+            if((!Objects.equals(gameBoard.get(indexOfColumn).get(indexOfRow).getText(), "X")) && (!Objects.equals(gameBoard.get(indexOfColumn).get(indexOfRow).getText(), "O"))) {
+                if(xMove) {
+                    gameBoard.get(indexOfColumn).get(indexOfRow).setText("X");
+                    xMove = false;
+                } else {
+                    gameBoard.get(indexOfColumn).get(indexOfRow).setText("O");
+                    xMove = true;
+                }
             }
+
             if((checkWin(verticals) || checkWin(horizontals) || checkWin(diagonals) )) {
             //if(checkWin(gameBoard)) {
                 System.out.println("USER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!");
@@ -87,6 +92,10 @@ public class ButtonListener implements ActionListener {
 
     public void returnGameNotOver() {
         gameIsOver = false;
+    }
+
+    public boolean boxNotSet() {
+        return false;
     }
 
 
