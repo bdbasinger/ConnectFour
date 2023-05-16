@@ -4,11 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ResetListener extends JFrame implements ActionListener {
     JButton button;
     ConnectFour game;
+    ButtonListener buttonListener = new ButtonListener();
+
 
     public ResetListener(ConnectFour game) {
         this.game = game;
@@ -21,6 +24,7 @@ public class ResetListener extends JFrame implements ActionListener {
         this.setLayout(new GridLayout());
         this.setVisible(true);
         this.add(button);
+
     }
 
 
@@ -28,8 +32,7 @@ public class ResetListener extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         System.out.println("RESET BUTTON ACTION METHOD");
         resetGame(game.buttons);
-        //game = new ConnectFour();
-        //this.game = new ConnectFour();
+        buttonListener.returnGameNotOver();
 
     }
 

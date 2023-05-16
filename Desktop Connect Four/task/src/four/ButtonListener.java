@@ -17,7 +17,7 @@ public class ButtonListener implements ActionListener {
 
     JButton[] winningButtons = new JButton[4];
 
-    boolean gameIsOver = false;
+    static boolean gameIsOver;
 
     Map<String, Integer> columnToIndexMap = Map.of(
             "A",0,
@@ -36,6 +36,10 @@ public class ButtonListener implements ActionListener {
         this.horizontals = horizontals;
         this.verticals = verticals;
         this.diagonals = diagonals;
+
+    }
+
+    public ButtonListener() {
 
     }
 
@@ -62,8 +66,8 @@ public class ButtonListener implements ActionListener {
                 for(JButton b : winningButtons) {
                     System.out.println("Winning Buttons: " + b.getName());
                     b.setBackground(Color.CYAN);
-                    gameIsOver = true;
                 }
+                gameIsOver = true;
             }
         }
     }
@@ -81,7 +85,7 @@ public class ButtonListener implements ActionListener {
         return 0;
     }
 
-    public void returnFalse() {
+    public void returnGameNotOver() {
         gameIsOver = false;
     }
 
