@@ -27,8 +27,9 @@ public class ResetListener extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         System.out.println("RESET BUTTON ACTION METHOD");
-        game = null;
-        game = new ConnectFour();
+        this.game = null;
+        this.game = new ConnectFour();
+
     }
 }
 

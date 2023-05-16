@@ -19,14 +19,6 @@ public class ButtonListener implements ActionListener {
 
     boolean gameIsOver = false;
 
-
-
-
-
-
-    int xInARow = 0;
-    int yInARow = 0;
-
     Map<String, Integer> columnToIndexMap = Map.of(
             "A",0,
             "B",1,
@@ -64,7 +56,7 @@ public class ButtonListener implements ActionListener {
                 xMove = true;
             }
             if((checkWin(verticals) || checkWin(horizontals) || checkWin(diagonals) )) {
-
+            //if(checkWin(gameBoard)) {
                 System.out.println("USER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!");
                 for(JButton b : winningButtons) {
                     System.out.println("Winning Buttons: " + b.getName());
@@ -102,20 +94,29 @@ public class ButtonListener implements ActionListener {
 
         for(int i = 0; i < list.size(); i++) {
             for(int j = 0; j < list.get(i).size(); j++) {
-                if(buttonEqualsX(list.get(i).get(j))) {
+
+                if((Objects.equals(list.get(i).get(j).getText()," "))) {
+                    countXsInARow = 0;
                     countOsInARow = 0;
+                }
+
+                // If this button's text == X
+                if(buttonEqualsX(list.get(i).get(j))) {
+                    // Set the count for O's in a row to zero
+                    countOsInARow = 0;
+                    //if(!(Objects.equals(list.get(i).get(j).getText()," ")))
                     winningButtons[countXsInARow] = list.get(i).get(j);
                     countXsInARow++;
-
+                    //winningButtons[countXsInARow] = list.get(i).get(j);
                 }
-                if(buttonEqualsY(list.get(i).get(j))) {
+                else if(buttonEqualsO(list.get(i).get(j))) {
                     countXsInARow = 0;
+                    //if(!(Objects.equals(list.get(i).get(j).getText()," ")))
                     winningButtons[countOsInARow] = list.get(i).get(j);
                     countOsInARow++;
-
+                    //winningButtons[countOsInARow] = list.get(i).get(j);
                 }
                 if(countXsInARow == 4 || countOsInARow == 4) {
-
                     return true;
                 }
 
@@ -134,7 +135,7 @@ public class ButtonListener implements ActionListener {
         return b.getText().equals("X");
     }
 
-    private boolean buttonEqualsY(JButton b) {
+    private boolean buttonEqualsO(JButton b) {
         return b.getText().equals("O");
     }
 
