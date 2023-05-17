@@ -91,3 +91,128 @@
 .---------------------------------------------
 [1;31m
 Start test 1[0m
+[1;31m
+Start test 2[0m
+[1;31m
+Start test 3[0m
+[1;31m
+Start test 4[0m
+[1;31m
+Start test 5[0m
+[1;31m
+Start test 6[0m
+[1;31m
+Start test 7[0m
+"[0;34mButtonA1 has an index of 0
+[1;31m
+Start test 8[0m
+&[0m[0;34mButtonA2 has an index of 1
+[1;31m
+Start test 9[0m
+*[0m[0;34mButtonReset has an index of -1
+[1;31m
+Start test 10[0m
+&[0m[0;34mButtonA6 has an index of 5
+&[0m[0;34mButtonA6 has an index of 5
+&[0m[0;34mButtonA6 has an index of 5
+&[0m[0;34mButtonA6 has an index of 5
+&[0m[0;34mButtonA6 has an index of 5
+&[0m[0;34mButtonA6 has an index of 5
+&[0m[0;34mButtonA6 has an index of 5
+&[0m[0;34mButtonA6 has an index of 5
+[1;31m
+Start test 11[0m
+*[0m[0;34mButtonReset has an index of -1
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonB6 has an index of 11
+'[0m[0;34mButtonC6 has an index of 17
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonG6 has an index of 41
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonB6 has an index of 11
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonC6 has an index of 17
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonG6 has an index of 41
+'[0m[0;34mButtonE6 has an index of 29
+4[0m[0;34mUSER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!
+%[0m[0;34mWinning Buttons: ButtonB2
+%[0m[0;34mWinning Buttons: ButtonC2
+%[0m[0;34mWinning Buttons: ButtonD2
+%[0m[0;34mWinning Buttons: ButtonE2
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonB6 has an index of 11
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonC6 has an index of 17
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonG6 has an index of 41
+'[0m[0;34mButtonE6 has an index of 29
+4[0m[0;34mUSER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!
+%[0m[0;34mWinning Buttons: ButtonB1
+%[0m[0;34mWinning Buttons: ButtonC1
+%[0m[0;34mWinning Buttons: ButtonD1
+%[0m[0;34mWinning Buttons: ButtonE1
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonG6 has an index of 41
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonG6 has an index of 41
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonG6 has an index of 41
+'[0m[0;34mButtonF6 has an index of 35
+4[0m[0;34mUSER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!
+%[0m[0;34mWinning Buttons: ButtonF1
+%[0m[0;34mWinning Buttons: ButtonF2
+%[0m[0;34mWinning Buttons: ButtonF3
+%[0m[0;34mWinning Buttons: ButtonF4
+'[0m[0;34mButtonC6 has an index of 17
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonC6 has an index of 17
+'[0m[0;34mButtonC6 has an index of 17
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonC6 has an index of 17
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonC6 has an index of 17
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonC6 has an index of 17
+4[0m[0;34mUSER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!
+%[0m[0;34mWinning Buttons: ButtonC3
+%[0m[0;34mWinning Buttons: ButtonC4
+%[0m[0;34mWinning Buttons: ButtonC5
+%[0m[0;34mWinning Buttons: ButtonC6
+'[0m[0;34mButtonC6 has an index of 17
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonF6 has an index of 35
+&[0m[0;34mButtonA6 has an index of 5
+'[0m[0;34mButtonF6 has an index of 35
+*[0m[0;34mButtonReset has an index of -1
+'[0m[0;34mButtonG6 has an index of 41
+'[0m[0;34mButtonG6 has an index of 41
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonF6 has an index of 35
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonE6 has an index of 29
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonD6 has an index of 23
+'[0m[0;34mButtonD6 has an index of 23
+4[0m[0;34mUSER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!
+%[0m[0;34mWinning Buttons: ButtonD5
+%[0m[0;34mWinning Buttons: ButtonE4
+%[0m[0;34mWinning Buttons: ButtonF3
+%[0m[0;34mWinning Buttons: ButtonG2
+[1;31m
+Start test 12[0m

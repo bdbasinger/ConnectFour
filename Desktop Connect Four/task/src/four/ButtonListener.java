@@ -13,11 +13,14 @@ public class ButtonListener implements ActionListener {
     List<List<JButton>> diagonals;
     List<List<JButton>> gameBoard;
     List<JButton> buttons;
-    boolean xMove = true;
+
 
     JButton[] winningButtons = new JButton[4];
 
+    static boolean xMove = true;
     static boolean gameIsOver;
+
+    JButton resetButton;
 
     Map<String, Integer> columnToIndexMap = Map.of(
             "A",0,
@@ -30,12 +33,13 @@ public class ButtonListener implements ActionListener {
     );
 
     // Constructor
-    public ButtonListener(List<List<JButton>> gameBoard, List<JButton> buttons, List<List<JButton>> horizontals, List<List<JButton>> verticals, List<List<JButton>> diagonals) {
+    public ButtonListener(List<List<JButton>> gameBoard, List<JButton> buttons, List<List<JButton>> horizontals, List<List<JButton>> verticals, List<List<JButton>> diagonals, JButton resetButton) {
         this.gameBoard = gameBoard;
         this.buttons = buttons;
         this.horizontals = horizontals;
         this.verticals = verticals;
         this.diagonals = diagonals;
+        this.resetButton = resetButton;
 
     }
 
@@ -46,9 +50,9 @@ public class ButtonListener implements ActionListener {
     // Define what happens when clicking a button on the board
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        JButton button = (JButton) e.getSource();
         if(!gameIsOver) {
-            JButton button = (JButton) e.getSource();
+
             String buttonName = button.getName();
             System.out.println(buttonName + " has an index of " + buttons.indexOf(button));
             String columnLetter = (String) button.getClientProperty("Column");
@@ -64,7 +68,6 @@ public class ButtonListener implements ActionListener {
                     xMove = true;
                 }
             }
-
             if((checkWin(verticals) || checkWin(horizontals) || checkWin(diagonals) )) {
             //if(checkWin(gameBoard)) {
                 System.out.println("USER WON THE GAME!!!!!!!!!!!!!!!!!!!!!!!");
@@ -75,9 +78,15 @@ public class ButtonListener implements ActionListener {
                 gameIsOver = true;
             }
         }
+        if(Objects.equals(button.getName(), "ButtonReset")) {
+            for(JButton jButton : buttons) {
+                jButton.setText(" ");
+                jButton.setBackground(Color.red);
+                setGameNotOver();
+                setXMoveTrue();
+            }
+        }
     }
-
-
 
     //Find the index of where the player's X or O should be placed
     public int checkButton(int index) {
@@ -90,13 +99,16 @@ public class ButtonListener implements ActionListener {
         return 0;
     }
 
-    public void returnGameNotOver() {
+    public void setGameNotOver() {
         gameIsOver = false;
     }
 
-    public boolean boxNotSet() {
-        return false;
+    public void setXMoveTrue() {
+        xMove = true;
     }
+
+
+
 
 
     /*

@@ -4,13 +4,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 import java.util.List;
-import four.ApplicationRunner;
 
 
 /*
 Your program should display an empty game board as described below.
 The main Connect4 class should extend the JFrame class, set its title as Connect Four, and exit on close;
-The cells should extend the JButton class. Hint: Set the painted focus to false to remove the highlighting on the clicked cells;
+The cells should extend the JButton class. Hint: Set the painted focus to false in order to remove the highlighting on the clicked cells;
 Create 6 rows and 7 columns on the board;
 Each cell should be visible and display the row and column as its label. For example, A1, G6;
 Each cell should be named Button** where ** is the row and column designation in the label;
@@ -49,11 +48,36 @@ public class ConnectFour extends JFrame {
             "A","B","C","D","E","F","G"};
 
     public ConnectFour() {
+        setSize(800,800);
+
+        JPanel mainPanel = new JPanel(new GridLayout(2,1));
+        mainPanel.setSize(800,800);
+        add(mainPanel);
+
+        JPanel gamePanel = new JPanel(new GridLayout(6,7,5,5));
+        gamePanel.setMinimumSize(new Dimension(700,700));
+        mainPanel.add(gamePanel);
+
+        JPanel resetPanel = new JPanel(new FlowLayout());
+        //resetPanel.setSize(100,100);
+        resetPanel.setBackground(Color.CYAN);
+
+
+        JButton resetButton = new JButton("Reset");
+        resetButton.setName("ButtonReset");
+
+
+        resetPanel.add(resetButton);
+        mainPanel.add(resetPanel);
+
+
         setTitle("Connect Four");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 800);
+        //setSize(800, 800);
         setLocationRelativeTo(null);
-        setLayout(new GridLayout(6,7,5,5));
+        //setLayout(new GridLayout(6,7,5,5));
+
+
         // For Every array element in pieces array, do the following:
         for (String piece : pieces) {
             //Create new JButton b and set its text equal to " "
@@ -68,9 +92,9 @@ public class ConnectFour extends JFrame {
             //Add the JButton I'm working with to the buttons ArrayList
             buttons.add(b);
             //Add the JButton to the layout
-            add(b);
+            gamePanel.add(b);
         }
-        setVisible(true);
+
 
         for(int i = 0; i < buttons.size(); i++) {
             buttons.get(i).putClientProperty("Column", letters[i]);
@@ -217,7 +241,14 @@ public class ConnectFour extends JFrame {
 
 
 
-        ButtonListener buttonListener = new ButtonListener(gameBoard, buttons, horizontals, verticals, diagonals);
+
+        ButtonListener buttonListener = new ButtonListener(gameBoard, buttons, horizontals, verticals, diagonals, resetButton);
+
+        resetButton.addActionListener(buttonListener);
+
+        resetButton.putClientProperty("Column", "A");
+
+
 
         for(JButton b : buttons) {
             b.addActionListener(buttonListener);
@@ -250,6 +281,40 @@ public class ConnectFour extends JFrame {
         set that Button's text to the current user's piece, an X or an O
 
          */
+
+
+        //JPanel resetPanel = new JPanel(new FlowLayout());
+/*
+        JButton resetButton = new JButton("Reset");
+        resetPanel.add(resetButton);
+        resetPanel.setVisible(true);
+        //resetPanel.add(this);
+        add(resetButton);
+        JSplitPane pane = new JSplitPane(JSplitPane.VERTICAL_SPLIT,resetButton,this);
+        //add(resetPanel);
+
+ */
+        //add(gamePanel);
+        //add(resetPanel);
+
+
+        JSplitPane panels = new JSplitPane(JSplitPane.VERTICAL_SPLIT,gamePanel,resetPanel);
+        //panels.setPreferredSize(new Dimension(1000,1000));
+
+        add(panels);
+
+
+        //panels.setVisible(true);
+        this.setMinimumSize(new Dimension(800,800));
+        pack();
+        setVisible(true);
+
+
+
+
+
+
+
     }
 
 

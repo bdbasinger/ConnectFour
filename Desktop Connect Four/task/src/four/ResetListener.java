@@ -24,7 +24,6 @@ public class ResetListener extends JFrame implements ActionListener {
         this.setLayout(new GridLayout());
         this.setVisible(true);
         this.add(button);
-
     }
 
 
@@ -32,8 +31,8 @@ public class ResetListener extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         System.out.println("RESET BUTTON ACTION METHOD");
         resetGame(game.buttons);
-        buttonListener.returnGameNotOver();
-
+        buttonListener.setGameNotOver();
+        buttonListener.setXMoveTrue();
     }
 
 
